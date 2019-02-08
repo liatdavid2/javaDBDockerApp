@@ -88,7 +88,7 @@ public class AccordionDataResource {
 	 * GET
 	 * url :http://localhost:7000/rest/Accordion/GetObjectsNames
 	 */
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://192.168.99.101:3000")
 	@GetMapping("/GetObjectsNames")
 	public List<?> GetObjectsNames() {
 
@@ -119,7 +119,7 @@ public class AccordionDataResource {
 	 * @HTTP_request_method GET
 	 * @URL :http://localhost:7000/rest/Accordion/Product
 	 */
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://192.168.99.101:3000")
 	@GetMapping(value = "/{objectname}")
 	public List<String> getFieldsByObjectName(@PathVariable("objectname") final 
 			String objectname) {
@@ -146,7 +146,7 @@ public class AccordionDataResource {
 	 * @HTTP_request_method POST
 	 * @URL :http://localhost:7000/rest/Accordion/postFieldsReturnTable
 	 */
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://192.168.99.101:3000")
 	@PostMapping("/postFieldsReturnTable")
 	public List<String> postFieldsReturnTable(@RequestBody final List<String>fields) {
 		for(int i=0;i<fields.size();i++)
