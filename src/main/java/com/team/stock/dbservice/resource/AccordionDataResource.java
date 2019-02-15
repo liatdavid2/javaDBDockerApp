@@ -99,7 +99,7 @@ public class AccordionDataResource {
 	 * GET
 	 * url :http://localhost:7000/rest/Accordion/GetObjectsNames
 	 */
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://192.168.99.100:3000")
 	@GetMapping("/GetObjectsNames")
 	public List<?> GetObjectsNames() {
 
@@ -130,7 +130,7 @@ public class AccordionDataResource {
 	 * @HTTP_request_method GET
 	 * @URL :http://localhost:7000/rest/Accordion/Product
 	 */
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://192.168.99.100:3000")
 	@GetMapping(value = "/{objectname}")
 	public List<String> getFieldsByObjectName(@PathVariable("objectname") final 
 			String objectname) {
