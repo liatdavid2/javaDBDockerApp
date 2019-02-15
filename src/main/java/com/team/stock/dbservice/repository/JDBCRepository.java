@@ -18,9 +18,10 @@ public class JDBCRepository {
 	@Autowired
 	JdbcTemplate JdbcTemplate;
 
-	public List<String> getAllBodyName(){
+	public List<String> getAllBodyName(String column,String table,String condition){
 		List<String>usernameList=new ArrayList<>();
-		usernameList.addAll(JdbcTemplate.queryForList(" SELECT body FROM world.accordion  ",String.class));
+		usernameList.addAll(JdbcTemplate.queryForList(" SELECT "+ column+" FROM world."+table+" where "+
+				condition,String.class));
 		return usernameList;
 	}
 	public List<JoinCitiesAccordion> getJoinCitiesAccordion(){
