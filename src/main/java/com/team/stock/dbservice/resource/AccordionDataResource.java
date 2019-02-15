@@ -157,7 +157,7 @@ public class AccordionDataResource {
 	 * @HTTP_request_method POST
 	 * @URL :http://localhost:7000/rest/Accordion/postFieldsReturnTable
 	 */
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://192.168.99.100:3000")
 	@PostMapping("/postFieldsReturnTable")
 	public ArrayList<ArrayList<String>> postFieldsReturnTable(@RequestBody final ArrayList<ArrayList<String>>fields) {
 		for(int i=0;i<fields.size();i++)
